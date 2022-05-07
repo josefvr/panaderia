@@ -1,15 +1,15 @@
 <?php
-	
+
 	class Panes_model {
-		
+
 		private $db;
 		private $panes;
-		
+
 		public function __construct(){
 			$this->db = Conectar::conexion();
 			$this->panes = array();
 		}
-		
+
 		public function get_panes()
 		{
 			$sql = "SELECT * FROM panes";
@@ -22,12 +22,12 @@
 		}
 		//Creamos una funcion para poder añadir un prodocto
 		public function insertar($nombre_pan, $precio, $promocion){
-			
+
 			$resultado = $this->db->query("INSERT INTO panes (nombre_pan, precio, promocion) VALUES ('$nombre_pan', '$precio', '$promocion')");
-			
+
 		}
-		
-		
+
+
 		public function get_pan($nombre_pan)
 		{
 			$sql = "SELECT * FROM panes WHERE nombre_pan='$nombre_pan'";
@@ -36,5 +36,9 @@
 
 			return $row;
 		}
-	} 
+		//Función para eliminar datos (panes) de la BD.
+		public function eliminar($nombre_pan){
+			$resultado = $this->db->query("DELETE FROM panes WHERE nombre_pan = '$nombre_pan'");
+		}
+	}
 ?>
