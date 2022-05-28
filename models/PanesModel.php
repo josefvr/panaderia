@@ -27,7 +27,6 @@
 
 		}
 
-
 		public function get_pan($nombre_pan)
 		{
 			$sql = "SELECT * FROM panes WHERE nombre_pan='$nombre_pan'";
