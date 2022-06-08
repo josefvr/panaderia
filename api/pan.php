@@ -47,7 +47,6 @@
       $resultado["mensaje"] = "Eliminar pan con el id: " .$_GET['id'];
       echo json_encode($resultado);
     break;
-    
   }
 
 ?>

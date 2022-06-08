@@ -81,8 +81,16 @@
     public static function obtenerPan($indice){
 
       $contenidoArchivo = file_get_contents("../data/pan.json");
+      // echo $contenidoArchivo;
       $panes = json_decode($contenidoArchivo, true);
       echo json_encode($panes[$indice]);
+
+    }
+
+    public static function obtenerPanes(){
+
+      $contenidoArchivo = file_get_contents("../data/pan.json");
+     echo $contenidoArchivo;
 
     }
 
