@@ -16,7 +16,7 @@
     <br>
     <?php
       require 'conexion.php';
-      $todos= "SELECT * FROM panes";
+      $todos= "SELECT * FROM panaderia";
       $resultado= mysqli_query($conectar,$todos);
       while ($fila = mysqli_fetch_assoc($resultado)){
     ?>
@@ -41,6 +41,10 @@
       ?>
     </table>
     <br>
+  </div>
+  <div class="apiEquipoLuis">
+    <h1>API del otro equipo</h1>
+    <iframe src="https://ourpageitm.website/api/usuarios.php" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
   </div>
   <?php
     include "abajo.php";

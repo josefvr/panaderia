@@ -546,3 +546,14 @@ textarea{
   max-width: 300px;
   max-height: 55px;
 }
+.apiEquipoLuis{
+  background-color: #dac6a3b2;
+  color: #42210B;
+  font-size: 20px;
+  margin-top: -25px;
+  text-align: center;
+}
+.apiEquipoLuis h1{
+  font-weight: bold;
+  padding-top: 20px;
+}
